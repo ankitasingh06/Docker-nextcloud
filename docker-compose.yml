@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+        dbos:
+                image: mysql:5.7
+                volumes:
+                        - mysql_storage_new1:/var/lib/mysql
+                restart: always
+                environment:
+                        MYSQL_ROOT_PASSWORD: rootpass
+                        MYSQL_USER: ankita
+                        MYSQL_PASSWORD: redhat
+                        MYSQL_DATABASE: mydb1
+        nextcloudos:
+                image: nextcloud:latest
+                restart: always
+                depends_on:
+                        - dbos
+                volumes: 
+                        - nextcloud:/var/www/html
+                ports:
+                        - 8082:80
+
+volumes:
+        nextcloud:
+        mysql_storage_new1:
+
+
+
