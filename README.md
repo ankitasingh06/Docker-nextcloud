@@ -15,14 +15,14 @@ Implementing nextcloud on docker and establishing connection with mysql.
 There are following important concepts, which is required before developing this project-->
 	
 	*Docker requires ISO/image file for installation of containers(OS)
-	For the downloading the ISO/image files you can go to download it from docker-hub or by using following command download the 		images first
+	For the downloading the ISO/image files you can go to download it from docker-hub or by using following command download the images first
 	
 		mysql image:-	        docker pull mysql:5.7
 		nextcloud image :-	docker pull nextcloud:latest
 	
-	*Now there is the dependency of nextcloud on database server(here we have take- mysql) so launch "mysql" container(named - dbos) 	first then launch "nextcloud" container.
+	*Now there is the dependency of nextcloud on database server(here we have take- mysql) so launch "mysql" container(named - dbos) first then launch "nextcloud"(named nextcloudos) container.
 	
-	*Written code in .yml file so that our code is safe either the container gets removed hence promoting "Infrastructure as cloud" 	so in the same repository there is "docker-compose.yml" file having the main code written.
+	*Written code in .yml file so that our code is safe either the container gets removed hence promoting "Infrastructure as cloud" so in the same repository there is "docker-compose.yml" file having the main code written.
 	
 	*We have used "volume concept" for storing the data permanently 
 	
